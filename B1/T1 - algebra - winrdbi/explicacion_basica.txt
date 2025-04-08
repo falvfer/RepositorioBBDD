@@ -1,0 +1,25 @@
+La sintaxis es así por ahora:
+<nombre_tabla_consulta>(<lista_nombres_columnas>) := <comando> <continuacion_comando> (<tabla>)
+
+- En nombre_tabla_consulta puedes cambiar el nombre de la tabla al que quieras.
+- En lista_nombres_columnas puedes cambiar el nombre de todas las columnas que aparezcan en la consulta final, me refiero con esto, si la tabla tiene 6 columnas tienes que poner 3 nombres (nombre1, nombre2, nombre3), si estas haciendo un project para que aparezca una sola celda solo tienes que poner un nombre (nombre1).
+- En comando puedes escribir uno de los dos comandos que hemos aprendido por ahora: select o project, en base a eso cambia la continuacion_comando:
+	- Si has escrito project entonces escribes las columnas que quieres que se muestren solamente (proyectar) en continuacion_comando, si quieres proyectar el id y el nombre, entonces pones "id, nombre" sin las comillas.
+	- Si has escrito select entonces puedes hacer comprobaciones logicas, para facilitar la lectura puedes poner cada expresion en un parentesis (tal que asi "(numero=1) and (id>'D')"), para poder hacer varias comprobaciones puedes usar las palabras "and" y "or", se colocan entre las expresiones como se ha visto en el ejemplo que he puesto antes.
+	- Y por ultimo indicas la tabla de la cual estas recogiendo los datos para hacer la consulta, escribes: (pisos) por ejemplo.
+	
+Mi recomendacion, primero nombra la tabla y pon una base tal que así:
+	ej12 := ();
+
+Después lee el enunciado y mira a cual tabla le vas a hacer la consulta, por ejemplo, si esta hablando de la tabla pisos, entonces pones lo siguiente:
+	ej12 := (pisos);
+	
+Y ahora miras a ver que te pide, te pide hacer comprobaciones? o proyectar una o varia celdas solamente? En base a lo que te pida entonces sigues escribiendo el comando, imaginate que pide "la informacion de todas las personas que empiezan por la letra S o mayor", entonces escribes:
+	ej12 := select (nombre>'S') (pisos);
+		Dato adicional, no se puede usar el igual con caracteres, tiene que ser mayor o menor que.
+
+Y listo, en la proxima clase daremos comandos dentro de otros comandos, como puedes ver en mis actividades de más adelante, simplemente es mezclar unas cosas con otras.
+
+
+
+Después están las operaciones producto y demás, en vez de "<comando> <continuacion_comando> (<tabla>)" es "(<tabla>) product (<tabla>)" y se puede mezclar lo anterior.

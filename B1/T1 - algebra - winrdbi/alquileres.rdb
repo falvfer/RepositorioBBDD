@@ -1,0 +1,41 @@
+@propietarios(nif/char,nombre/char,direccion/char,poblacion/char):nif
+'nif1','Luis','C/ nueva','Archidona'
+'nif2','Felipe','C/ carrera','Antequera'
+'nif3','Jacinto','C/ victoria','Loja'
+'nif4','Mariano','C/ ejido','La Roda'
+'nif5','Antonio','C/ Nueva','Archidona'
+
+@inquilinos(nif/char,nombre/char,direccion/char,poblacion/char):nif
+'nif5','Antonio','C/ Nueva','Archidona'
+'nif6','Alberto','C/ Blas','Malaga'
+'nif7','Rigoberto','C/ Nueva','Archidona'
+'nif8','Matias','C/ plato','Antequera'
+'nif9','Rafael','C/ ejido','Archidona'
+
+@reparadores(nif/char,nombre/char,direccion/char,poblacion/char):nif
+'nif10','Vicente','C/ Nueva','Archidona'
+'nif11','Filibero','C/ Blas','Malaga'
+'nif12','Manuel','C/ Nueva','Archidona'
+'nif13','Alejandro','C/ plato','Antequera'
+'nif9','Rafael','C/ ejido','Archidona'
+
+@pisos(id_piso/numeric,nif/char,direccion/char,precio/numeric):id_piso
+1,'nif1','piso 1',100
+2,'nif3','piso 2',200
+3,'nif2','piso 3',300
+4,'nif1','piso 4',400
+5,'nif1','piso 5',500
+6,'nif2','piso 6',600
+
+@alquileres(id_alquiler/numeric,nif/char,id_piso/numeric,precio/numeric):id_alquiler
+1,'nif6',1,200
+2,'nif6',2,300
+3,'nif7',3,400
+4,'nif8',4,500
+
+@reparaciones(id_reparacion/numeric,nif/char,id_piso/numeric,importe/numeric):id_reparacion
+1,'nif10',1,100
+2,'nif11',2,300
+3,'nif10',3,400
+4,'nif12',4,500
+
